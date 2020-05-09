@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="full-bflex-rowser" lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		
+		<link rel="icon" type="image/vnd.microsoft.icon" href="assets/img/favicon.png"/>
+
+		<title>Teamwork AR</title>
+		
+		<!-- Load CSS =============================-->
+			<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+			<link rel="stylesheet" href="css/main.min.css">
+			
+	</head>
+
+	<body>
+		<div id="app" class="app">
+			<div id="stage">
+				<video autoplay></video>
+
+				<div id="overlay" class="">
+					<canvas class="img-renderer"></canvas>
+				</div>
+				
+				<canvas id="paper_canvas" class="paper"></canvas>
+
+				<div id="hud" >
+					<div id="menu" class="menu closed">
+						<button class="btn btn-toggle"></button>
+						<div class="inner">
+							<ul class="settings hidden"></ul>
+							<ul class="settings hidden"></ul>
+							<ul class="options">
+								<li class="btn"><p>Audio Source</p></li>
+								<li class="btn"><p>Video Source</p></li>
+							</ul>
+						</div>
+					</div>
+
+					<div id="taskbar" class="taskbar">
+						<button class="btn-tray round"></button>
+
+						<div class="inner">
+							
+							<div class="row tools hidden">
+								<button id="btn-screencap" title="Capture Screen" class="btn-task round ico screencap"></button>
+								<button id="btn-draw" title="Draw Tool" class="btn-task round ico draw hidden" data-tool="draw" data-options="true"></button>
+								<button id="btn-rectangle" title="Rectangle Tool" class="btn-task round ico rectangle hidden" data-tool="rectangle" data-options="true"></button>
+								<button id="btn-ellipse" title="Ellipse Tool" class="btn-task round ico ellipse hidden" data-tool="ellipse" data-options="true"></button>
+								<!-- <button id="btn-arrow" title="Arrow Tool" class="btn-task round ico arrow hidden" data-tool="arrow" data-options="true"></button> -->
+								<button id="btn-text" title="Text Tool" class="btn-task round ico text hidden" data-tool="text" data-options="true"></button>
+								<button id="btn-select" title="Selection Tool" class="btn-task round ico select hidden" data-tool="select"></button>
+								<button id="btn-trash" title="Delete Selection" class="btn-task round ico trash hidden"></button>
+								<button id="btn-send" title="Send Image" class="btn-task round ico send disabled hidden"></button>
+								<button id="btn-close" title="Close Anotation/Draw Tool" class="btn-task round ico close hidden"></button>
+							</div>
+
+							<div class="row options hidden">
+								<button title="" class="btn-task ico stroke selected" data-stroke="1"></button>
+								<button title="" class="btn-task ico stroke" data-stroke="2"></button>
+								<button title="" class="btn-task ico stroke" data-stroke="3"></button>
+								<button title="" class="btn-task ico stroke" data-stroke="4"></button>
+								<button title="" class="btn-task ico stroke" data-stroke="5"></button>
+								<button title="" class="btn-task ico stroke" data-stroke="6"></button>
+								<button title="" class="btn-task ico stroke" data-stroke="7"></button>
+								<button title="" class="btn-task ico stroke" data-stroke="8"></button>
+								<button title="" class="btn-task ico stroke" data-stroke="9"></button>
+							</div>
+
+							<div class="row options hidden">
+								<button title="" class="btn-task ico color selected" data-swatch="#000000"></button>
+								<button title="" class="btn-task ico color" data-swatch="#ffffff"></button>
+								<button title="" class="btn-task ico color" data-swatch="#00ff00"></button>
+								<button title="" class="btn-task ico color" data-swatch="#ffff00"></button>
+								<button title="" class="btn-task ico color" data-swatch="#ff9900"></button>
+								<button title="" class="btn-task ico color" data-swatch="#ff0000"></button>
+								<button title="" class="btn-task ico color" data-swatch="#ff00ff"></button>
+								<button title="" class="btn-task ico color" data-swatch="#9900ff"></button>
+								<button title="" class="btn-task ico color" data-swatch="#0000ff"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<!-- Load JS =============================-->
+			<script src="js/vendor/jquery-3.2.1.min.js"></script>
+			<script src="js/vendor/tweenmax.2.1.3.min.js"></script>
+			<script src="js/vendor/jquery.fancybox.min.js"></script>
+			<script src="js/vendor/paper.js"></script>
+			<script src="js/main.js"></script>
+			<script type="" src="js/custom-paper.js"></script>
+	</body>
+</html>
